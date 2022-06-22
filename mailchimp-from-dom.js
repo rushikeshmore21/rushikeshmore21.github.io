@@ -2,7 +2,7 @@ console.log('Connected');
 document.addEventListener("DOMContentLoaded", function(){
   console.log('Connected after DOM loaded');
   if (window.location.href == 'https://www.baravinsclt.com/s/checkout') {
-  document.querySelector('.contact-form[data-v-1c63be16]').parentElement.previousElementSibling.innerHTML = '<b>Subscribe Now</b>';
+//   document.querySelector('.contact-form[data-v-1c63be16]').parentElement.previousElementSibling.innerHTML = '<b>Subscribe Now</b>';
   document.querySelector('.contact-form[data-v-1c63be16]').innerHTML = '';
 
   document.querySelector('.contact-form[data-v-1c63be16]').innerHTML +=     document.querySelector('.contact-form[data-v-1c63be16]').parentElement.previousElementSibling.innerHTML = '<b>Subscribe Now</b>';

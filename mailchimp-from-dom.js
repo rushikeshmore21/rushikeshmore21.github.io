@@ -16,5 +16,5 @@ document.getElementsByClassName('contact-form')[0].innerHTML += `<b>Subscribe No
 console.log('END');
 //}
  }
-}, 2000);//wait 2 seconds
+}, 10000);//wait 2 seconds
 

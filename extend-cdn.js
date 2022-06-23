@@ -25,7 +25,7 @@ const ShopObserver = new MutationObserver((mutations, obs) => {
     var targetSecondForShopPage = document.getElementsByClassName('category-header__container');
     if (targetSecondForShopPage) {
         if (window.location.href.indexOf("shop") > -1) { 
-          document.getElementsByClassName('category-header__container')[0].innerHTML += '<p style="margin: .7rem 0;font-size:16px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
+          document.getElementsByClassName('category-header__container')[0].innerHTML += '<p style="margin: .4rem 0;font-size:20px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
           document.getElementsByClassName('category-title-row')[0].innerHTML += '<p style="margin: .7rem 0;font-size:16px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
         }
         obs.disconnect();

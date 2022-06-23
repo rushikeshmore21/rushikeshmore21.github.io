@@ -16,7 +16,11 @@ console.warn('CDN IS CONNECTED');
         var config = { attributes: true, childList: true, characterData: true }
 
         // pass in the target node, as well as the observer options
+        function runObserver(){
         observer.observe(target, config);
+        }
+        window.setTimeout(runObserver,400);
+
         console.log('end');
   }
 // }

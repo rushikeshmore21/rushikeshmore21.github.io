@@ -19,3 +19,26 @@ observer.observe(document, {
   childList: true,
   subtree: true
 });
+
+
+//new shop observer
+
+const ShopObserver = new MutationObserver((mutations, obs) => {
+    var targetSecondForShopPage = document.getElementsByClassName('category-header__container');
+    if (targetSecondForShopPage) {
+        console.log('Fun is started .................');
+        if (window.location.href.includes('shop')) {  
+          console.log('Verification done, it is checkout page');
+          document.getElementsByClassName('category-header__container')[0].innerHTML += '<p style="margin: .7rem 0;font-size:16px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
+          document.getElementsByClassName('category-title-row')[0].innerHTML += '<p style="margin: .7rem 0;font-size:16px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
+        }
+        obs.disconnect();
+        return;
+    }
+    
+  });
+  
+  ShopObserver.observe(document, {
+    childList: true,
+    subtree: true
+  });

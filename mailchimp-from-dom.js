@@ -2,7 +2,10 @@ console.log('Connected');
 window.addEventListener("load", function(){
   
   console.log('Connected after DOM loaded');
-    if (window.location.href == 'https://www.baravinsclt.com/s/checkout') {
+  setTimeout(() => {
+  
+    
+        if (window.location.href == 'https://www.baravinsclt.com/s/checkout') {
   //   document.querySelector('.contact-form[data-v-1c63be16]').parentElement.previousElementSibling.innerHTML = '<b>Subscribe Now</b>';
 //     document.getElementsByClassName('contact-form[data-v-1c63be16]').parentElement.previousElementSibling.innerHTML = '';
     
@@ -10,5 +13,12 @@ window.addEventListener("load", function(){
 
     console.log('END');
   }
+    
+    
+}, "1000")
+  
+  
+  
+
 
 });

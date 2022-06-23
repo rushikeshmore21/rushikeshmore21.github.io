@@ -1,5 +1,5 @@
 console.warn('CDN IS CONNECTED');
-if (document.readyState == 'complete') {
+// if (document.readyState == 'complete') {
   if (window.location.href == 'https://www.baravinsclt.com/s/checkout') {  
       console.log('URL is verified!!!!');
         var target = document.querySelector('.checkout-section[data-test-id="order-summary"][data-v-65cef6d8][data-v-65cef6d8]');
@@ -19,4 +19,4 @@ if (document.readyState == 'complete') {
         observer.observe(target, config);
         console.log('end');
   }
-}
+// }

@@ -1,8 +1,4 @@
-(function(e,f){var b={},g=function(a){b[a]&&(f.clearInterval(b[a]),b[a]=null)};e.fn.waitUntilExists=function(a,h,j){var c=this.selector,d=e(c),k=d.not(function(){return e(this).data("waitUntilExists.found")});"remove"===a?g(c):(k.each(a).data("waitUntilExists.found",!0),h&&d.length?g(c):j||(b[c]=f.setInterval(function(){d.waitUntilExists(a,h,!0)},500)));return d}})(jQuery,window);
-
-
-var target = document.querySelector('.checkout-section[data-test-id="order-summary"][data-v-65cef6d8][data-v-65cef6d8]');
-
+console.log('Plugin Is COnnected');
 
 function runMe(){
   console.log('Fun is started .................');
@@ -13,4 +9,20 @@ function runMe(){
 
 }
 
-jQuery(target).waitUntilExists(runMe);
+
+let observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (!mutation.addedNodes) return
+
+    for (let i = 0; i < mutation.addedNodes.length; i++) {
+      // do things to your newly added nodes here
+      console.log('IN LOOP');
+      runMe();
+      let node = mutation.addedNodes[i]
+    }
+  })
+})
+
+
+var target = document.querySelector('.checkout-section[data-test-id="order-summary"][data-v-65cef6d8][data-v-65cef6d8]');
+

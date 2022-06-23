@@ -4,6 +4,9 @@ console.warn('CDN IS CONNECTED');
       console.log('URL is verified!!!!');
         var target = document.querySelector('.checkout-section[data-test-id="order-summary"][data-v-65cef6d8][data-v-65cef6d8]');
         // create an observer instance
+        if(target){console.log('ELe is exist')}
+            if(!target){console.log('ELe is NOTTT exist')}
+
         var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
             console.log('Verification done, it is checkout page');

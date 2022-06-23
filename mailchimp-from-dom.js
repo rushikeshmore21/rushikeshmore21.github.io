@@ -1,7 +1,7 @@
 console.warn('CDN IS CONNECTED');
 if (document.readyState == 'complete') {
   if (window.location.href == 'https://www.baravinsclt.com/s/checkout') {  
-    
+      console.log('URL is verified!!!!');
         var target = document.querySelector('.checkout-section[data-test-id="order-summary"][data-v-65cef6d8][data-v-65cef6d8]');
         // create an observer instance
         var observer = new MutationObserver(function(mutations) {
@@ -17,6 +17,6 @@ if (document.readyState == 'complete') {
 
         // pass in the target node, as well as the observer options
         observer.observe(target, config);
-  
+        console.log('end');
   }
 }

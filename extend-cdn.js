@@ -35,6 +35,8 @@ const ShopObserver = new MutationObserver((mutations, obs) => {
   });
   
   ShopObserver.observe(document, {
+    characterData: true,
+    attributes: false,
     childList: true,
     subtree: true
   });

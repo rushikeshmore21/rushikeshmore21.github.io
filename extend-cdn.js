@@ -20,7 +20,7 @@ observer.observe(document, {
 
 
 //Shop Observer
-var targetSecondForShopPage = document.getElementsByClassName('category-header__container');
+var targetSecondForShopPage = 'category-header__container'
 const ShopObserver = new MutationObserver((mutations, obs) => {
   
 for (const mutation of mutations) {

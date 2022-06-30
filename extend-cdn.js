@@ -38,7 +38,7 @@ for (const mutation of mutations) {
 });
   
   ShopObserver.observe(document, {
-    attributes: false,
+    attributes: true,
     childList: true,
     subtree: true
   });

@@ -20,22 +20,28 @@ observer.observe(document, {
 
 
 //Shop Observer
+    var targetSecondForShopPage = document.getElementsByClassName('category-header__container');
 
 const ShopObserver = new MutationObserver((mutations, obs) => {
-    var targetSecondForShopPage = document.getElementsByClassName('category-header__container');
-    if (targetSecondForShopPage) {
-        if (window.location.href.indexOf("shop") > -1) { 
-          document.getElementsByClassName('category-header__container')[0].innerHTML += '<p style="margin: .1rem 0;font-size:20px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
-          document.getElementsByClassName('category-title-row')[0].innerHTML += '<p style="margin: .4rem 0;font-size:16px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
-        }
-        obs.disconnect();
-        return;
-    }
+  
+for (const mutation of mutations) {
+      if (mutation.target.classList. contains (targetSecondForShopPage)) {
+            if (targetSecondForShopPage) {
+            if (window.location.href.indexOf("shop") > -1) { 
+            document.getElementsByClassName('category-header__container')[0].innerHTML += '<p style="margin: .1rem 0;font-size:20px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
+            document.getElementsByClassName('category-title-row')[0].innerHTML += '<p style="margin: .4rem 0;font-size:16px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
+            }
+            obs.disconnect();
+            return;
+            }
+      }
+}
+  
+    
     
   });
   
   ShopObserver.observe(document, {
-    characterData: true,
     attributes: false,
     childList: true,
     subtree: true

@@ -34,7 +34,7 @@ const ShopObserver = new MutationObserver((mutations, obs) => {
     
   });
   
-  ShopObserver.observe(document, {
+  ShopObserver.observe(document.getElementsByClassName('category-header__container'), {
     characterData: true,
     attributes: false,
     childList: true,

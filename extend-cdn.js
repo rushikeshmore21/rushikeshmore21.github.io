@@ -59,22 +59,29 @@ function displayCountPrice() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', function () {
+function addSellMsg(){
+
   let loadInterval = null;
- loadInterval = this.setInterval(() => {
-      if (document.getElementsByClassName("category-header__container").length > 0) {
-              this.clearInterval(loadInterval);
-              loadInterval = null
-              displayCountPrice();
-      }
-  }, 500);
+  loadInterval = this.setInterval(() => {
+       if (document.getElementsByClassName("category-header__container").length > 0) {
+               this.clearInterval(loadInterval);
+               loadInterval = null
+               displayCountPrice();
+       }
+   }, 500);
+ 
+   this.setTimeout(() => {
+       if (loadInterval != null) {
+           this.clearInterval(loadInterval)
+       }
+   }, 10000)
+}
+window.addEventListener('popstate', function (event) {
+  addSellMsg();
+});
 
-
-  this.setTimeout(() => {
-      if (loadInterval != null) {
-          this.clearInterval(loadInterval)
-      }
-  }, 10000)
+window.addEventListener('DOMContentLoaded', function () {
+    addSellMsg();
 });
 
 

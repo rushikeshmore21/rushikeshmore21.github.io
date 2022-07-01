@@ -65,7 +65,7 @@ const ShopObserver = new MutationObserver((mutations, obs) => {
   
 });
 
-ShopObserver.observe(document, {
+ShopObserver.observe(document.body, {
   childList: true,
   subtree: true
 });

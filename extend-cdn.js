@@ -60,8 +60,8 @@ function displayCountPrice() {
 }
 
 function addSellMsg(){
-
-  let loadInterval = null;
+  if (window.location.href.indexOf("shop") > -1) {  
+    let loadInterval = null;
   loadInterval = this.setInterval(() => {
        if (document.getElementsByClassName("category-header__container").length > 0) {
                this.clearInterval(loadInterval);
@@ -75,6 +75,7 @@ function addSellMsg(){
            this.clearInterval(loadInterval)
        }
    }, 10000)
+  }
 }
 window.addEventListener('popstate', function (event) {
   addSellMsg();

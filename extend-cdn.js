@@ -24,7 +24,7 @@ var targetSecondForShopPage = 'category-header__container'
 const ShopObserver = new MutationObserver((mutations, obs) => {
   
 for (const mutation of mutations) {
-      if (mutation.target.classList.contains(targetSecondForShopPage)) {
+      if (mutation.target.nodeName.toLowerCase() == 'img') {
         console.log(mutation.target);
 
             // if (window.location.href.indexOf("shop") > -1) { 
@@ -46,19 +46,19 @@ for (const mutation of mutations) {
   });
 
 
-  window.addEventListener('DOMContentLoaded', (event) => {
-    var shop_link = document.querySelector('a.router-link-exact-active.router-link-active');
-    shop_link.addEventListener('click', function(){
-      console.log('Run Click Event');
-    });
+  // window.addEventListener('DOMContentLoaded', (event) => {
+  //   var shop_link = document.querySelector('a.router-link-exact-active.router-link-active');
+  //   shop_link.addEventListener('click', function(){
+  //     console.log('Run Click Event');
+  //   });
 
-    console.log('Run DOMContentLoaded');
-    console.log('Target element:', document.getElementsByClassName('category-header__container'));
-    // if (window.location.href.indexOf("shop") > -1) { 
-      // document.getElementsByClassName('category-header__container')[0].innerHTML += '<p style="margin: .1rem 0;font-size:20px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
-      // document.getElementsByClassName('category-title-row')[0].innerHTML += '<p style="margin: .4rem 0;font-size:16px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
-    // }
-});
+//     console.log('Run DOMContentLoaded');
+//     console.log('Target element:', document.getElementsByClassName('category-header__container'));
+//     // if (window.location.href.indexOf("shop") > -1) { 
+//       // document.getElementsByClassName('category-header__container')[0].innerHTML += '<p style="margin: .1rem 0;font-size:20px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
+//       // document.getElementsByClassName('category-title-row')[0].innerHTML += '<p style="margin: .4rem 0;font-size:16px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
+//     // }
+// });
 
 // const ShopObserver = new MutationObserver((mutations, obs) => {
 //   var targetSecondForShopPage = document.getElementsByClassName('category-header__container');

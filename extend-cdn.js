@@ -21,8 +21,8 @@ observer.observe(document, {
 
 // Shop Observer
 
-var targetSecondForShopPage = 'category-header__container'
-const ShopObserver = new MutationObserver((mutations, obs) => {
+// var targetSecondForShopPage = 'category-header__container'
+// const ShopObserver = new MutationObserver((mutations, obs) => {
   
 // for (const mutation of mutations) {
 //       if (mutation.target.nodeName.toLowerCase() == 'img') {
@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded', function () {
           this.clearInterval(loadInterval)
       }
   }, 10000)
-})
+});
 
 
   // window.addEventListener('DOMContentLoaded', (event) => {

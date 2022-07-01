@@ -78,7 +78,7 @@ function addSellMsg(){
   }
 }
 window.addEventListener('popstate', function (event) {
-  console.log(this.location.href);
+  console.log('Location:', this.location.href);
   addSellMsg();
 });
 

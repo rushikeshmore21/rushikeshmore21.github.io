@@ -45,8 +45,10 @@ for (const mutation of mutations) {
     subtree: true
   });
 
+
   window.addEventListener('DOMContentLoaded', (event) => {
-    document.addEventListener('click', function(){
+    var shop_link = document.querySelector('a.router-link-exact-active.router-link-active');
+    shop_link.addEventListener('click', function(){
       console.log('Run Click Event');
     });
 

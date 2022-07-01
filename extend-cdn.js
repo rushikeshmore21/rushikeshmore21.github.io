@@ -46,6 +46,9 @@ for (const mutation of mutations) {
   });
 
   window.addEventListener('DOMContentLoaded', (event) => {
+    document.addEventListener('click', function(){
+      console.log('Run Click Event');
+    });
     console.log('Run DOMContentLoaded');
     // if (window.location.href.indexOf("shop") > -1) { 
     //   document.getElementsByClassName('category-header__container')[0].innerHTML += '<p style="margin: .1rem 0;font-size:20px;text-transform: uppercase;">10% off 12 Bottle Cases with Code 12bottle</p>';
